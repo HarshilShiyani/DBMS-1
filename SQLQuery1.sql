@@ -110,3 +110,63 @@ UPDATE
 10 UPDATE BORROW SET AMOUNT=NULL WHERE LOANNO=481
 
  UPDATE BORROW SET AMOUNT=200
+
+ 1 DELETE FROM CUSTOMERS WHERE CITY='BOMBAY'
+ 2 DELETE FROM DEPOSIT WHERE ACTNO<1000
+ 3 DELETE FROM BORROW WHERE BNAME='AJNI'
+ 4 DELETE FROM BORROW WHERE LOANNO<510 AND LOANNO>201
+ 5 DELETE FROM DEPOSIT WHERE ADATE>'1991-12-01'
+ 6 TRUNCATE TABLE CUSTOMERS
+ 7 DELETE FROM DEPOSIT WHERE CNAME='ANIL' AND ACTNO=101
+ 8 DELETE FROM DEPOSIT WHERE BNAME='ANDHERI'
+ 9 DELETE FROM BORROW WHERE AMOUNT<2000 AND BNAME!='VRCE'
+ 10 DROP TABLE BRANCH
+
+
+
+
+ create table Student
+(
+	Enrollment_No VARCHAR(20),
+	Name VARCHAR(25),
+	CPI DECIMAL(5,2),
+	Birthedate DATETIME
+)
+
+SELECT *FROM Student
+
+
+ 1 ALTER TABLE Student ADD City VARCHAR(20) NULL,BACKLOG INT NOT NULL
+ 2 ALTER TABLE Student ALTER column Name VARCHAR(35)
+ 3 ALTER TABLE Student ALTER column CPI INT
+ 4 Sp_Rename 'Student.Enrollment_No','ENO','COLUMN'
+ 5  ALTER TABLE Student DROP COLUMN CITY
+ 6 Sp_Rename 'Student','Student_MASTER'
+ 7 ALTER TABLE Student DROP COLUMN BACKLOG
+ 8  ALTER TABLE Student ALTER column Name VARCHAR(35) NOT NULL 
+ 9 Sp_Rename 'Student_MASTER.Birthedate','BDATE','COLUMN'
+ 10 ALTER TABLE Student ALTER column ENO VARCHAR(12)
+
+     
+	 create table Students
+(
+	StuID int,
+	FirstNmae VARCHAR(25),
+	LastName VARCHAR(25),
+	Website VARCHAR(50),
+	City VARCHAR(25),
+	Division VARCHAR(20)
+)
+
+SELECT *FROM Students
+
+INSERT INTO Students VALUES(1011,'Keyur','Patel','techonthenet.com','Rajkot','II-BCX')
+INSERT INTO Students VALUES(1022,'Hardik','Shah','digminecraft.com','Ahmedabad','I-BCY')
+INSERT INTO Students VALUES(1033,'Kajal','Trivedi','bigactivities.com','Baroga','IV-DCX')
+INSERT INTO Students VALUES(1044,'Bhoomi','Gajera','checkyourmath.com','Ahmedabad','III-DCW')
+INSERT INTO Students VALUES(1055,'Harmit','Mitel','','Rajkot','II-BCY')
+INSERT INTO Students VALUES(1066,'Ashok','Jani','','Baroda','II-BCZ')
+
+select FirstNmae,LastName from Students where FirstNmae like 'k%'
+
+
