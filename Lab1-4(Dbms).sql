@@ -148,7 +148,7 @@ SELECT *FROM Student
  10 ALTER TABLE Student ALTER column ENO VARCHAR(12)
 
      
-	 create table Students
+	 create table Students123
 (
 	StuID int,
 	FirstNmae VARCHAR(25),
@@ -158,16 +158,16 @@ SELECT *FROM Student
 	Division VARCHAR(20)
 )
 
-SELECT *FROM Students
+SELECT *FROM Students123
 
-INSERT INTO Students VALUES(1011,'Keyur','Patel','techonthenet.com','Rajkot','II-BCX')
-INSERT INTO Students VALUES(1022,'Hardik','Shah','digminecraft.com','Ahmedabad','I-BCY')
-INSERT INTO Students VALUES(1033,'Kajal','Trivedi','bigactivities.com','Baroga','IV-DCX')
-INSERT INTO Students VALUES(1044,'Bhoomi','Gajera','checkyourmath.com','Ahmedabad','III-DCW')
-INSERT INTO Students VALUES(1055,'Harmit','Mitel','','Rajkot','II-BCY')
-INSERT INTO Students VALUES(1066,'Ashok','Jani','','Baroda','II-BCZ')
+INSERT INTO Students123 VALUES(1011,'Keyur','Patel','techonthenet.com','Rajkot','II-BCX')
+INSERT INTO Students123 VALUES(1022,'Hardik','Shah','digminecraft.com','Ahmedabad','I-BCY')
+INSERT INTO Students123 VALUES(1033,'Kajal','Trivedi','bigactivities.com','Baroga','IV-DCX')
+INSERT INTO Students123 VALUES(1044,'Bhoomi','Gajera','checkyourmath.com','Ahmedabad','III-DCW')
+INSERT INTO Students123 VALUES(1055,'Harmit','Mitel','','Rajkot','II-BCY')
+INSERT INTO Students123 VALUES(1066,'Ashok','Jani','','Baroda','II-BCZ')
 
-select FirstNmae,LastName from Students where FirstNmae like 'k%'
+select FirstNmae,LastName from Students123 where FirstNmae like 'k%'
 2 select FirstNmae,LastName from Students123 where FirstNmae like '_____'
 3 select FirstNmae,LastName from Students123 where city like '%a' and city like '______'
 4 select * from Students123 where LastName like '%'
