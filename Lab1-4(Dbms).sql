@@ -207,3 +207,30 @@ select FirstNmae,LastName from Students123 where FirstNmae like 'k%'
 15. select rand()
 
 
+
+STRING Function
+
+1. select len(null),len('  hello  '),len('blank')
+2. select lower('HARSHIL'),upper('harshil')
+3. select SUBSTRING('HARSHIL',1,3)
+4. select SUBSTRING('123456789012345',3,8)
+5. select REPLACE('ABC123EFG','123','XYZ'),REPLACE('ABCABCABC','C','5')
+6. select ASCII('a'),ASCII('A'),ASCII('z'),ASCII('Z'),ASCII('0'),ASCII('9')
+7. select char(97),char(65),char(122),char(90),char(48),char(57)
+8. select ltrim('      hello world')
+9. select rtrim('hello world     ')
+10.select left('SQL SERVER',4),right('SQL SERVER',5)
+11.select cast('1234.56' as float)
+12.select convert(int,10.58)
+13.select space(10)+'Harshil'
+14.select 'Harshil'+'shiyani'
+     select concat('harshil','Shiyani')
+15.select reverse('Darshan')
+16.select replicate('Harshil',3)
+17.select stuff('SQL Tutorial',1,3,'HTML')
+18.select COALESCE(NULL,NULL,NULL,NULL,NULL,'HARSHIL')
+19.select isnumeric('123456i')
+20.select CHARINDEX('t','Customer')
+
+
+
