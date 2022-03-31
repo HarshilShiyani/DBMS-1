@@ -233,4 +233,65 @@ STRING Function
 20.select CHARINDEX('t','Customer')
 
 
+7.1 [Date Function]:-
+   
+   1.select getdate() as Today_Date
+   2.select getdate()+365
+   3.select convert(varchar,getdate())
+   4.select convert(varchar,getdate(),106)
+   5.select convert(varchar,getdate(),7)
+   6.select datediff(month,'2008-12-31','2009-03-31')
+   7.select datediff(year,'2010-09-10 ','2012-01-25')
+   8.select datediff(hour,'2012-01-26 07:00','2012-01-26 10:30')
+   9.select day('2016-03-12'), month('2016-03-12'),year('2016-03-12')
+   10.select dateadd(year,5,getdate())
+   11.select dateadd(month,-2,getdate())
+   12.select datename(month,getdate())
+       select datepart(month,getdate())
+   13.select eomonth(getdate())
+   14.select  getdate()+30
+   15.select datediff(month,'2003-10-23',getdate())
+       select datediff(year,'2003-10-23',getdate())
+
+
+create table Student_Marks
+(
+	sid int not null,
+	SName VARCHAR(50),
+	Marks int not null
+)
+INSERT INTO Student_Marks VALUES(1,'John',90)
+INSERT INTO Student_Marks VALUES(2,'Martin',80)
+INSERT INTO Student_Marks VALUES(3,'Carol',89)
+INSERT INTO Student_Marks VALUES(4,'Jack',99)
+INSERT INTO Student_Marks VALUES(5,'Rose',88)
+INSERT INTO Student_Marks VALUES(6,'Mary',90)
+select * from Student_Marks
+
+1. select count(*) from Student_Marks
+2. select sum(Marks) from Student_Marks
+3. select avg(Marks) from Student_Marks
+4. select min(Marks) from Student_Marks
+5. select max(Marks) from Student_Marks
+
+
+Lab:-8
+
+create table Employee
+(
+	EID int not null,
+	EName VARCHAR(50) not NULL,
+	Department varchar(50) not null,
+	salary Decimal(8,2) not null,
+	JoiningDate datetime not null ,
+	city varchar(50) not null
+)
+
+select * from Employee
+
+1. select max(salary) as Maximum,min(salary) as Minumum,sum(salary) as Total_sal,avg(salary) as Average_sal from Employee
+2. select count(*) from Employee
+3. select max(salary) salary from Employee where Department='it'
+4. select distinct count(city) from Employee
+
 
