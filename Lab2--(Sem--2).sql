@@ -1,7 +1,7 @@
 --Dount-18--28--27---
 
 
---1. Display all the employees whose name starts with “m” and 4 th character is “h”.
+--1. Display all the employees whose name starts with â€œmâ€ and 4 th character is â€œhâ€.
 	
 	select * 
 	from employee 
@@ -15,18 +15,18 @@
 
 	select GETDATE()-20
 
---4. Write a query to display name of employees whose name starts with “j” and contains “n” in their name.
+--4. Write a query to display name of employees whose name starts with â€œjâ€ and contains â€œnâ€ in their name.
 
 	select ename 
 	from employee 
 	where ename like 'j%n%'
 
---5. Display 2nd to 9th character of the given string “SQL Programming”.
+--5. Display 2nd to 9th character of the given string â€œSQL Programmingâ€.
 
 	select 
 	SUBSTRING('SQL Programming', 2, 9)
 
---6. Display name of the employees whose city name ends with “ney” &contains six characters.
+--6. Display name of the employees whose city name ends with â€œneyâ€ &contains six characters.
 
 	select ename 
 	from employee 
@@ -47,7 +47,7 @@
 	set department='Marketing' 
 	where city='london'
 
---10. Display all the employees whose name ends with either “n” or “y”.
+--10. Display all the employees whose name ends with either â€œnâ€ or â€œyâ€.
 
 	select * 
 	from employee
@@ -106,7 +106,7 @@
 	group by City 
 	having sum(salary)>15000  
 
---20. Write a query to replace “u” with “oo” in Ename.
+--20. Write a query to replace â€œuâ€ with â€œooâ€ in Ename.
 
 	select 
 	replace(ename,'u','oo') 
