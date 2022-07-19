@@ -101,11 +101,11 @@ use [Person_Info_356]
 	having count(personid)>2
 
 
------13. Combine person name’s first three characters with city name’s last three characters in single column.
+-----13. Combine person nameâ€™s first three characters with city nameâ€™s last three characters in single column.
 
 	select left(personname,3)+right(city,3) from person
 
------14. Give 10% increment in Computer department employee’s salary.
+-----14. Give 10% increment in Computer department employeeâ€™s salary.
 
 	select salary10percentageplus=salary+(salary*0.1) 
 	from
@@ -114,4 +114,9 @@ use [Person_Info_356]
 	where Departmentname='Computer' 
 
 
------15. Display all the person name’s who’s joining dates difference with current date is more than 365 days.	select personname	from	person	where DATEDIFF(day,joiningdate,getdate())>365
+-----15. Display all the person nameâ€™s whoâ€™s joining dates difference with current date is more than 365 days.
+
+	select personname
+	from
+	person
+	where DATEDIFF(day,joiningdate,getdate())>365
